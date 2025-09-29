@@ -1,26 +1,45 @@
 # Conculator
 
-**Conculator** is a lightweight command-line calculator written in Go.  
-It performs basic arithmetic operations and can be extended with more features.
+**Conculator** is a financial accumulation calculator written in Go.  
+It calculates the future value of a savings plan based on initial deposit, monthly contributions, interest rate, and duration.  
+Additionally, it converts results into USD and EUR using fixed exchange rates.
 
-## Features
+---
 
-- Basic operations: addition, subtraction, multiplication, division  
-- Supports both integers and floating-point numbers  
-- Error handling (e.g. division by zero, invalid input)  
-- Minimal dependencies, fast and portable  
+## 💡 Features
 
-## Installation & Usage
+- Calculates:
+  - Total contributions over time
+  - Final amount with compound interest
+  - Interest earned (profit)
+- Converts results into:
+  - US Dollars (USD)
+  - Euros (EUR)
+- User-friendly terminal output
+- No external dependencies (just Go standard library)
+
+---
+
+## 🧮 Calculation Logic
+
+- **Compound interest formula**:
+  - Initial deposit grows with monthly compounding
+  - Monthly contributions are also compounded as a series
+- Exchange rates:
+  - USD: 1 USD = 38.5 UAH
+  - EUR: 1 EUR = 42.1 UAH
+
+---
+
+## 📦 Installation
 
 ### Requirements
 
-- Go 1.16+  
-- Git (to clone the repository)
+- Go 1.16 or newer
 
-### Installation
+### Clone and Build
 
 ```bash
 git clone https://github.com/LoLoL200/Conculator.git
 cd Conculator
-go mod tidy
 go build -o conculator
